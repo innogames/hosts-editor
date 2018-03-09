@@ -18,7 +18,7 @@ apply plugin: 'groovy'
 
 sourceCompatibility = 1.8
 
-version = "1.0.0"
+version = "1.0.1"
 group = "com.innogames.tools"
 
 repositories {

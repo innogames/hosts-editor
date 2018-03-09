@@ -78,8 +78,10 @@ class HostsEditor extends DefaultTask {
 	 */
 	static void writeHostsFile(File outputFile, HostEntries entries) {
 
+		def lineBreak = System.getProperty("line.separator")
+
 		def stringToWrite = entries.getEntries().inject("") { result, i ->
-			result + "${i.getHostEntryString()}\n"
+			result + "${i.getHostEntryString()}$lineBreak"
 		}
 
 		outputFile.parentFile.mkdirs()
